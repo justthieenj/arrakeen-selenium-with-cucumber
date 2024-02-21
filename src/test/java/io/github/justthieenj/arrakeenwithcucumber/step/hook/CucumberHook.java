@@ -1,7 +1,7 @@
 package io.github.justthieenj.arrakeenwithcucumber.step.hook;
 
 import io.cucumber.java.*;
-import io.github.justthieenj.arrakeenselenium.driver.Arrakeen;
+import io.github.justthieenj.arrakeenselenium.core.Arrakeen;
 
 public class CucumberHook {
     @Before

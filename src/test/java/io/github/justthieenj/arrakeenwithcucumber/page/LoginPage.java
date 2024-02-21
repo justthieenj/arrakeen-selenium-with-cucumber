@@ -1,8 +1,8 @@
 package io.github.justthieenj.arrakeenwithcucumber.page;
 
-import io.github.justthieenj.arrakeenselenium.element.ArrakeenElement;
+import io.github.justthieenj.arrakeenselenium.core.ArrakeenElement;
 
-import static io.github.justthieenj.arrakeenselenium.driver.Arrakeen.find;
+import static io.github.justthieenj.arrakeenselenium.core.Arrakeen.find;
 
 public class LoginPage {
     public final ArrakeenElement txtUsername = find("#txt-username");

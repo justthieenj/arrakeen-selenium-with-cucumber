@@ -4,8 +4,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.testng.Assert;
 
-import static io.github.justthieenj.arrakeenselenium.driver.Arrakeen.findByText;
-import static io.github.justthieenj.arrakeenselenium.driver.Arrakeen.open;
+import static io.github.justthieenj.arrakeenselenium.core.Arrakeen.findByText;
+import static io.github.justthieenj.arrakeenselenium.core.Arrakeen.open;
 import static io.github.justthieenj.arrakeenselenium.enums.ElementState.visible;
 
 public class CommonStep {
