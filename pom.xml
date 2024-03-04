@@ -5,77 +5,26 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.justthieenj</groupId>
-    <artifactId>arrakeen-selenium-with-cucumber</artifactId>
+    <artifactId>sample-arrakeen-selenium</artifactId>
     <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>arrakeen-with-cucumber</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <cucumber.version>7.15.0</cucumber.version>
-        <allure.version>2.25.0</allure.version>
-        <threadCount>1</threadCount>
     </properties>
-
-    <build>
-        <defaultGoal>dependency:copy-dependencies test</defaultGoal>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.3</version>
-                <configuration>
-                    <properties>
-                        <property>
-                            <name>dataproviderthreadcount</name>
-                            <value>${threadCount}</value>
-                        </property>
-                        <property>
-                            <name>disableXmlReport</name>
-                            <value>true</value>
-                        </property>
-                    </properties>
-                    <argLine>
-                        -Dcucumber.plugin="io.github.justthieenj.arrakeenwithcucumber.utils.CucumberListener"
-                    </argLine>
-                    <systemPropertyVariables>
-                        <allure.results.directory>
-                            ${project.build.directory}/allure-results
-                        </allure.results.directory>
-                    </systemPropertyVariables>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
     <dependencies>
         <dependency>
             <groupId>io.github.justthieenj</groupId>
             <artifactId>arrakeen-selenium</artifactId>
             <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-cucumber7-jvm</artifactId>
-            <version>${allure.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>${cucumber.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-picocontainer</artifactId>
-            <version>${cucumber.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-testng</artifactId>
-            <version>${cucumber.version}</version>
         </dependency>
     </dependencies>
 

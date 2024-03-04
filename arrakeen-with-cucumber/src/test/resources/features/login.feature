@@ -1,3 +1,4 @@
+@login
 Feature: Login to make an appointment
 
   Scenario: User login to make an appointment
